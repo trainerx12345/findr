@@ -57,7 +57,7 @@ function Registration() {
 		}
 
 		axios
-			.post('https://findr-eta.vercel.app:8000/api/v1/auth/register', {
+			.post('https://backend-findr.vercel.app:8000/api/v1/auth/register', {
 				firstName: firstname,
 				lastName: lastname,
 				contactNumber: contact,
