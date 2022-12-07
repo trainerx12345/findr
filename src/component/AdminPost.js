@@ -136,7 +136,7 @@ const AdminPost = (props) => {
 	const sendEmail = async (e, postId) => {
 		e.preventDefault();
 		axios
-			.get(`https://findr-eta.vercel.app:8000/api/v1/posts/${postId}`)
+			.get(`https://backend-findr.vercel.app:8000/api/v1/posts/${postId}`)
 			.then((result) => {
 				setDetails({
 					firstname: result.data.userId.firstName,
@@ -168,7 +168,7 @@ const AdminPost = (props) => {
 
 	const handleApproveClick = (state) => {
 		axios
-			.patch(`https://findr-eta.vercel.app:8000/api/v1/posts/${state.target.id}`, {
+			.patch(`https://backend-findr.vercel.app:8000/api/v1/posts/${state.target.id}`, {
 				type: 'Approved',
 			})
 			.then((response) => {
@@ -183,7 +183,7 @@ const AdminPost = (props) => {
 	const handleDeleteClick = (state) => {
 		state.preventDefault();
 		axios
-			.patch(`https://findr-eta.vercel.app:8000/api/v1/posts/${state.target.id}`, {
+			.patch(`https://backend-findr.vercel.app:8000/api/v1/posts/${state.target.id}`, {
 				type: 'Pending',
 			})
 			.then((response) => {
@@ -197,7 +197,7 @@ const AdminPost = (props) => {
 	};
 	const handleFoundClick = (state) => {
 		axios
-			.patch(`https://findr-eta.vercel.app:8000/api/v1/posts/${state.target.id}`, {
+			.patch(`https://backend-findr.vercel.app:8000/api/v1/posts/${state.target.id}`, {
 				status: 'Found',
 			})
 			.then((response) => {
@@ -215,7 +215,7 @@ const AdminPost = (props) => {
 	const handleDismissClick = (state) => {
 		state.preventDefault();
 		axios
-			.patch(`https://findr-eta.vercel.app:8000/api/v1/posts/${state.target.id}`, {
+			.patch(`https://backend-findr.vercel.app:8000/api/v1/posts/${state.target.id}`, {
 				status: 'Dismiss',
 				type: 'Deleted',
 			})
