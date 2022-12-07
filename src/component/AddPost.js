@@ -17,7 +17,7 @@ function AddPost() {
 	//* Philippines
 	const onSubmit = (e) => {
 		axios
-			.post('https://findr-eta.vercel.app:8000/api/v1/posts', {
+			.post('https://backend-findr.vercel.app:8000/api/v1/posts', {
 				title: title,
 				fullName: fullName,
 				image: image,
