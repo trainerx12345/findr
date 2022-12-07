@@ -14,7 +14,7 @@ const Dashboard = () => {
 		navigate('/');
 	};
 	useEffect(() => {
-		axios.get(`https://findr-eta.vercel.app:8000/api/v1/posts`).then((response) => {
+		axios.get(`https://backend-findr.vercel.app:8000/api/v1/posts`).then((response) => {
 			dispatch({
 				type: 'POPULATE_POSTS',
 				payload: { posts: response.data },
