@@ -18,7 +18,7 @@ function LoginPage() {
 
 		setType([]);
 		// TODO get all user username for comparing
-		axios.get('https://findr-eta.vercel.app:8000/api/v1/users/').then((result) => {
+		axios.get('https://backend-findr.vercel.app:8000/api/v1/users/').then((result) => {
 			setType(
 				result.data.map((user) => {
 					return user.type;
@@ -33,7 +33,7 @@ function LoginPage() {
 		e.preventDefault();
 		//TODO : check if the user is in the database
 		axios
-			.post('https://findr-eta.vercel.app:8000/api/v1/auth/login', {
+			.post('https://backend-findr.vercel.app:8000/api/v1/auth/login', {
 				email: email,
 				password: password,
 			})
