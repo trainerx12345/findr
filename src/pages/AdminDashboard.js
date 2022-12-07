@@ -13,7 +13,7 @@ export default function Dashboard() {
 	//TODO : fetch all the users
 	React.useEffect(() => {
 		axios
-			.get('https://findr-eta.vercel.app:8000/api/v1/users')
+			.get('https://backend-findr.vercel.app:8000/api/v1/users')
 			.then((result) => {
 				setUsers(result.data);
 			})
@@ -23,7 +23,7 @@ export default function Dashboard() {
 	//TODO : fetch all posts
 	React.useEffect(() => {
 		axios
-			.get('https://findr-eta.vercel.app:8000/api/v1/posts')
+			.get('https://backend-findr.vercel.app:8000/api/v1/posts')
 			.then((result) => {
 				setPosts(result.data);
 			})
